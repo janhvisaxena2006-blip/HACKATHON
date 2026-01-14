@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Rewards Wallet</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--USER NAME-->
+<div id="nameScreen" class="name-screen">
+  <div class="name-box">
+    <h2>🌱 Welcome to Green Rewards Wallet</h2>
+    <p>Let’s start your eco journey. What’s your name?</p>
+
+    <input type="text" id="userNameInput" placeholder="Enter your name" />
+    <button class="btn" onclick="saveUserName()">Continue</button>
+  </div>
+</div>
+
+<!--Main Screen-->
+<div id="mainApp" style="display: none;">
+<header class="hero">
+  <div class="hero-content fade-in">
+    <h1>Green Rewards Wallet 🌱</h1>
+    <p>Track eco actions. Earn points. Save the planet.</p>
+    <p id="welcomeText"></p>
+    <button
+  class="btn dark-toggle"
+  id="themeToggleBtn"
+  onclick="toggleDarkMode()">
+  🌙 Dark Mode
+</button>
+
+
+   <h3 class="btn eco-heading">
+  🌱 Every small green action makes a big impact
+</h3>
+
+  </div>
+</header>
+
+<section class="action-select">
+  <h2>Select Eco Action</h2>
+
+  <select id="ecoAction">
+    <option value="">-- Choose an action --</option>
+    <option value="10">Paid bills digitally (+10)</option>
+    <option value="20">Used public transport (+20)</option>
+    <option value="15">Avoided single-use plastic (+15)</option>
+    <option value="30">Used solar energy (+30)</option>
+    <option value="25">Went carpooling (+25)</option>
+    <option value="20">Cycled or walked (+20)</option>
+    <option value="10">Switched off unused appliances (+10)</option>
+    <option value="25">Used energy-efficient devices (+25)</option>
+    <option value="50">Planted a tree (+50)</option>
+    <option value="15">Chose paperless banking (+15)</option>
+  </select>
+
+ <button
+  class="btn"
+  id="addActionBtn"
+  onclick="addSelectedAction()"
+  disabled>
+  Add Selected Action
+</button>
+
+</button>
+  <button class="btn reset-btn" onclick="resetWallet()">Reset Wallet</button>
+  <button class="btn reset-btn" onclick="changeUser()">Change User</button>
+
+
+</section>
+
+<!--Youtube Video Section-->
+<section class="video-section">
+  <a 
+    href="https://youtu.be/Ee9ZbEq1LsE" 
+    target="_blank" 
+    class="video-link"
+  >
+    ▶️ Let's Understand what is sustainable living!
+  </a>
+</section>
+
+<section class="stats">
+  <div class="stat-card slide-up">
+    <i class="fa-solid fa-leaf icon green"></i>
+    <h2 id="points">0</h2>
+    <p>Green Points</p>
+  </div>
+
+  <div class="stat-card slide-up">
+    <i class="fa-solid fa-recycle icon blue"></i>
+    <h2 id="actions">0</h2>
+    <p>Eco Actions</p>
+  </div>
+
+  <div class="stat-card slide-up">
+    <i class="fa-solid fa-earth-asia icon orange"></i>
+    <h2 id="level">Beginner</h2>
+    <p>Impact Level</p>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Go Green?</h2>
+
+  <div class="feature">
+    <i class="fa-solid fa-bolt icon yellow"></i>
+    <div>
+      <h3>Smart Tracking</h3>
+      <p>Monitor every eco-friendly action you take.</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-seedling icon green"></i>
+    <div>
+      <h3>Grow Your Impact</h3>
+      <p>Small steps build a sustainable future.</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-gift icon purple"></i>
+    <div>
+      <h3>Earn Rewards</h3>
+      <p>Redeem points for meaningful benefits.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Green Rewards Wallet 🌍</p>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
